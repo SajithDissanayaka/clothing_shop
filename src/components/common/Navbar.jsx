@@ -1,6 +1,7 @@
 import  {useContext} from 'react';
 import {CartContext} from '../../context/CartContext';
 import './Navbar.css';
+import {Link} from 'react-router-dom';
 
 
 
@@ -19,10 +20,10 @@ function NavBar(){
             </div>
             <div className='nav-actions'>
                 <button className='login-btn'>Login</button>
-                <div className='cart-icon'>
+                <Link to="/cart" className='cart-icon' style={{textDecoration: 'none', color: 'inherit'}}>
                     <span>Bag</span>
                     <span className='cart-count'>({totalItems})</span>
-                </div>
+                </Link>
             </div>
 
         </nav>
