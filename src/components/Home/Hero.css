@@ -1,0 +1,46 @@
+.hero-container{
+    height: 85vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+    url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1600');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+
+}
+
+.hero-content h1{
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 48px;
+    font-weight: 300; 
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+.hero-content p {
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+  max-width: 600px; 
+}
+
+.shop-now-btn {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 15px 35px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+.shop-now-btn:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+

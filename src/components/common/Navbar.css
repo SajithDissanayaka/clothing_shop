@@ -1,0 +1,57 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+}
+.logo{
+    font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 3px; 
+  color: #111111;
+}
+.nav-links {
+  display: flex;
+  gap: 30px; /* ලින්ක්ස් අතර පරතරය */
+}
+.nav-links a {
+  text-decoration: none; 
+  color: #555555;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease; 
+}
+.nav-links a:hover {
+  color: #000000;
+}
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.login-btn {
+  color: #555555;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.cart-icon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.cart-count {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 2px 8px;
+  border-radius: 50%; 
+  font-size: 12px;
+}
