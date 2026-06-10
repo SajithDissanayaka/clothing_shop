@@ -4,6 +4,31 @@ import  {createContext, useState} from 'react';
 export const CartContext = createContext();
 
 export function CartProvider({children}){
+
+    const incrementQuantity = (productId) => {
+        setcartItems(
+            cartItems.map((item) => 
+                item.id === productId ? {...item, quantity: item.quantity + 1} : item
+
+        )
+        );
+    };
+
+    const decrementQuantity = (productId) => {
+        setcartItems(
+            cartItems.map((item) => {
+                if(item.id === productId){
+                    if(item.quantity > 1){
+                        return {...item, quantity:item.quantity -1};
+                    }
+                    return null;
+
+                }
+                return item;
+            }).filter(Boolean)
+        );
+    };
+
     const [cartItems, setcartItems] = useState([]);
 
     const addToCart = (product)=>{
@@ -19,6 +44,9 @@ export function CartProvider({children}){
         });
     };
     return (
-        <CartContext.Provider value={{cartItems, addToCart}}>{children}</CartContext.Provider>
+        <CartContext.Provider value={{cartItems, addToCart, incrementQuantity, decrementQuantity}}>{children}</CartContext.Provider>
     );
+
+
 }
+export default CartProvider;

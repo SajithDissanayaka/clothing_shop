@@ -3,8 +3,8 @@ import { CartContext } from '../context/CartContext';
 import './Cart.css';
 
 function Cart() {
-  // get prooduct in cloud
-  const { cartItems } = useContext(CartContext);
+  // get product in cloud
+  const { cartItems, incrementQuantity, decrementQuantity } = useContext(CartContext);
 
   // cal total price
   const totalPrice = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
@@ -25,7 +25,12 @@ function Cart() {
               <div className="cart-item-info">
                 <h4>{item.name}</h4>
                 <p>Price: ${item.price}</p>
-                <p>Quantity: {item.quantity}</p>
+
+                <div className="quantity-controls">
+                  <button onClick={() => decrementQuantity(item.id)}>-</button>
+                  <span>{item.quantity}</span>
+                  <button onClick={() => incrementQuantity(item.id)}>+</button>
+                </div>
               </div>
               <div className="cart-item-total">
                 {/* show product price and quantity */}

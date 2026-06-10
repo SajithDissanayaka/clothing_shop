@@ -52,3 +52,35 @@
   cursor: pointer;
   margin-top: 20px;
 }
+.quantity-controller {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.quantity-controller button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.quantity-controller button:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.quantity-controller span {
+  font-weight: 500;
+  font-size: 16px;
+  min-width: 20px;
+  text-align: center;
+}
